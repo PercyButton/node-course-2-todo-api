@@ -7,7 +7,9 @@ const {MongoClient, ObjectID} = require('mongodb');
 // var {name, age} = user;
 // console.log(name, age);
 
-MongoClient.connect('mongodb://192.168.198.138:27017/TodoApp', (err, db) => {
+// var connection = 'mongodb://192.168.198.138:27017/TodoApp';
+var connection = 'mongodb://u_todoapi:pass_todoapi@ds137090.mlab.com:37090/d_todoapi';
+MongoClient.connect(connection, (err, db) => {
   if (err) {
     return console.log('Unable to connect to MongoDB server');
   }
